@@ -5,12 +5,11 @@
     "shx": "^0.3.3",
     "push-dir": "^0.4.1"
   },
-  "source": "./src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build-dev": "parcel build --no-optimize --public-url ./",
+    "start": "parcel ./src/index.html",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
     "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build --public-url ./",
+    "build": "parcel build ./src/index.html --public-url ./",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   }
 }
